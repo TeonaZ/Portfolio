@@ -1,19 +1,21 @@
 import React from 'react'
 import{useParams} from 'react-router-dom'
+import Button from 'react-bootstrap/Button';
 
 export default function Hero() {
 
-    const {name,apple} = useParams()
-    console.log(apple)
+    const heroStyles={backgroundColor:'rgb(206,130,255)', height:"100vh"}
+   
   return (
-    <div>
-        <div>
+    <div style={heroStyles}>
+        <div >
             Teona Zaalishvili
         </div>
         <div>
             Software Developer
         </div>
-        <button><a href="https://www.linkedin.com/in/teona-zaalishvili-181653264/">Contact Me!</a></button>
+       
+        <Button variant="outline-warning"><a href="https://www.linkedin.com/in/teona-zaalishvili-181653264/">Contact Me!</a></Button>{' '}
     </div>
   )
 }
